@@ -16,6 +16,6 @@ public sealed class SplashScreen : MonoBehaviour {
 	// wait some seconds to change scene
 	private IEnumerator Countdown () {
 		yield return new WaitForSeconds (secondsToChange);
-		SceneManager.LoadScene ("MainMenu");
+		SceneManager.LoadScene (MainGame.instance.MainMenuScene);
 	}
 }
