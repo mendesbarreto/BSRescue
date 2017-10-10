@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 71156224}
   - component: {fileID: 71156223}
   - component: {fileID: 71156222}
+  - component: {fileID: 71156227}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -265,6 +266,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71156227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71156221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac5187f1ab0c4605af2330c4340815e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634270433
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +415,7 @@ GameObject:
   - component: {fileID: 1380521679}
   - component: {fileID: 1380521678}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
