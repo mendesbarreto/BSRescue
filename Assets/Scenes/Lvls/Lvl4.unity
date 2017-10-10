@@ -947,6 +947,11 @@ Prefab:
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 474575039}
+    - target: {fileID: 114389291124481678, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: keyboard
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
@@ -1293,6 +1298,11 @@ Prefab:
     - target: {fileID: 4403111786961538, guid: e926a9534d1664c50bfe8444c0732e58, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212394530233848356, guid: e926a9534d1664c50bfe8444c0732e58,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 299
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e926a9534d1664c50bfe8444c0732e58, type: 2}
