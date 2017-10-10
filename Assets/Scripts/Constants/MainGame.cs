@@ -8,6 +8,9 @@ public class MainGame : MonoBehaviour {
 	private string selectLvlScene = "SelectLvl";
 	private string lvlScene = "Lvl";
 
+	private string floorTag = "Floor";
+	private string playerTag = "Player";
+
 	public string MainMenuScene {
 		get { return mainMenuScene; }
 		set { mainMenuScene = value; }
@@ -23,10 +26,19 @@ public class MainGame : MonoBehaviour {
 		set { lvlScene = value; }
 	}
 
+	public string FloorTag {
+		get { return floorTag; }
+		set { floorTag = value; }
+	}
+
+	public string PlayerTag {
+		get { return playerTag; }
+		set { playerTag = value; }
+	}
+
 	public static MainGame instance;
 
-	private void Awake()
-	{
+	private void Awake () {
 		instance = this;
 		DontDestroyOnLoad(transform.gameObject);
 	}
