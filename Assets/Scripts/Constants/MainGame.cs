@@ -6,6 +6,7 @@ public class MainGame : MonoBehaviour {
 
 	private string mainMenuScene = "MainMenu";
 	private string selectLvlScene = "SelectLvl";
+	private string lvlScene = "Lvl";
 
 	public string MainMenuScene {
 		get { return mainMenuScene; }
@@ -15,6 +16,11 @@ public class MainGame : MonoBehaviour {
 	public string SelectLvlScene {
 		get { return selectLvlScene; }
 		set { selectLvlScene = value; }
+	}
+
+	public string LvlScene {
+		get { return lvlScene; }
+		set { lvlScene = value; }
 	}
 
 	public static MainGame instance;
