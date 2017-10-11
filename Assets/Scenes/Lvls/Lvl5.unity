@@ -1232,9 +1232,57 @@ Prefab:
       propertyPath: keyboard
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114005741561839514, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+    - {fileID: 114777411634188160, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+    - {fileID: 114389291124481678, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1971434533 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1540415694185372, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1971434532}
+--- !u!114 &1971434534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1971434533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4a08e465c0247628fb143f36b00c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1971434535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1971434533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30392448e7b66459bb1030caeb7b2ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameGoal: 15
+  speedUp: 2.5
+  speedDown: 1.5
+  speedHorizontal: 3
+  keyboard: 1
+  winScreen: {fileID: 1550194576}
+--- !u!114 &1971434536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1971434533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21f498bce6084ce689b014737692dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathScreen: {fileID: 1912383603}
 --- !u!1001 &2011613918
 Prefab:
   m_ObjectHideFlags: 0
