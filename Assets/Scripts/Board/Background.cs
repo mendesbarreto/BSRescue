@@ -2,23 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Background : MonoBehaviour {
-
-	[SerializeField]
-	private GameObject Camera;
+public class Background : MonoBehaviour 
+{
 	[SerializeField]
 	private float speedCenario;
-	[SerializeField]
-	private float moveInX;
-	[SerializeField]
-	private float moveInY;
 
-	private void Update () {
+	private float BG_POSITION_Y = 0;
+
+	private void Update()
+	{
 		MoveBG();
 	}
 
-	private void MoveBG () {
+	// move background
+	private void MoveBG()
+	{
+		transform.position = new Vector2(VelocityBGInX (), 
+										 BG_POSITION_Y);
+	}
 
-		transform.position = new Vector2(moveInX + (Camera.transform.position.x / speedCenario), moveInY + (Camera.transform.position.y / speedCenario));
+	// Set velocity x on background
+	private float VelocityBGInX () 
+	{
+		float PositionXCamera = Camera.main.gameObject.transform.position.x;
+		float velocityBG = PositionXCamera / speedCenario;
+
+		return velocityBG;
 	}
 }
