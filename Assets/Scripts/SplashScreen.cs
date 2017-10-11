@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public sealed class SplashScreen : MonoBehaviour {
+public sealed class SplashScreen : MonoBehaviour 
+{
+	[SerializeField]
+	private float secondsToChange = 2;
 
-	private int secondsToChange = 2;
+	public float SecondsToChange 
+	{
+		get { return secondsToChange; }
+		set { secondsToChange = value; }
+	}
 
-	// Use this for initialization
-	private void Start () {
-
+	private void Start () 
+	{
 		StartCoroutine ("Countdown");
 	}
 
-	// wait some seconds to change scene
-	private IEnumerator Countdown () {
+	// Wait some seconds and then change scene
+	private IEnumerator Countdown () 
+	{
 		yield return new WaitForSeconds (secondsToChange);
-		SceneManager.LoadScene (MainGame.instance.MainMenuScene);
+		SceneManager.LoadScene (Constants.instance.MainMenuSceneName);
 	}
 }
