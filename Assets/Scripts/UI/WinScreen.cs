@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour 
+public class WinScreen : MonoBehaviour 
 {
-	public void PlayPress () 
+	public void ContinueButton () 
 	{
 		SceneManager.LoadScene (Constants.instance.SelectLvlSceneName);
-	}
-
-	public void QuitPress () 
-	{
-		Application.Quit ();
 	}
 }
