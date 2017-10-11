@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour {
-
-	public Canvas DeathScreen {
+public class Death : MonoBehaviour 
+{
+	public Canvas DeathScreen 
+	{
 		get { return deathScreen; }
 		set { deathScreen = value; }
 	}
@@ -12,18 +13,18 @@ public class Death : MonoBehaviour {
 	[SerializeField]
 	private Canvas deathScreen;
 
-	// Use this for initialization
-	void Start () {
+	private void Start () 
+	{
 		deathScreen.enabled = false;
 	}
 
 	// check collision
-	private void OnCollisionEnter2D (Collision2D collision) {
-
-		if (collision.gameObject.tag == MainGame.instance.FloorTag) {
+	private void OnCollisionEnter2D (Collision2D collision) 
+	{
+		if (collision.gameObject.tag == Constants.instance.FloorTagName) 
+		{
 			Destroy (gameObject);
 			deathScreen.enabled = true;
-
 		}
 	}
 }
