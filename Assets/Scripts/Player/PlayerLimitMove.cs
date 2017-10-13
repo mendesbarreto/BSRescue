@@ -32,13 +32,13 @@ public class PlayerLimitMove : MonoBehaviour
 	// Limit player on screen
 	private void PlayerLimitOnScreen () 
 	{
-		float limitY = Mathf.Clamp (currentPlayerPositionY, 
-									LimitYOnScreen (MIN_LIMIT),
-									LimitYOnScreen (MAX_LIMIT));
+		float limitY = Mathf.Clamp (currentPlayerPositionY,
+			LimitYOnScreen (MIN_LIMIT),
+			LimitYOnScreen (MAX_LIMIT));
 
 		Vector3 limitVector = new Vector3 (currentPlayerPositionX,
-										   limitY,
-										   currentPlayerPositionZ);
+			limitY,
+			currentPlayerPositionZ);
 
 		transform.position = limitVector;
 	}
@@ -48,9 +48,9 @@ public class PlayerLimitMove : MonoBehaviour
 	{
 		SelectReferenceYPosition (typeOfLimit);
 
-		Vector3 referencePoints = new Vector3 (REFERENCE_X_POSITION, 
-											   referenceYPosition,
-											   REFERENCE_Z_POSITION);
+		Vector3 referencePoints = new Vector3 (REFERENCE_X_POSITION,
+			referenceYPosition,
+			REFERENCE_Z_POSITION);
 
 		float limitY = Camera.main.ViewportToWorldPoint (referencePoints).y;
 

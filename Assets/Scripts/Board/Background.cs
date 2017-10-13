@@ -17,8 +17,8 @@ public class Background : MonoBehaviour
 	// move background
 	private void MoveBG()
 	{
-		transform.position = new Vector2(VelocityBGInX (), 
-										 BG_POSITION_Y);
+		transform.position = new Vector2(VelocityBGInX (),
+			BG_POSITION_Y);
 	}
 
 	// Set velocity x on background
