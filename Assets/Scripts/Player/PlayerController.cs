@@ -5,52 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour 
 {
 	[SerializeField]
-	private float gameGoal;
-
-	[SerializeField]
-	private float speedUp;
-
-	[SerializeField]
-	private float speedDown;
-
-	[SerializeField]
-	private float speedHorizontal;
-
-	[SerializeField]
-	private bool keyboard;
-
-	[SerializeField]
 	private Canvas winScreen;
-
-	public float GameGoal 
-	{
-		get { return gameGoal; }
-		set { gameGoal = value; }
-	}
-
-	public float SpeedUp 
-	{
-		get { return speedUp; }
-		set { speedUp = value; }
-	}
-
-	public float SpeedDown 
-	{
-		get { return speedDown; }
-		set { speedDown = value; }
-	}
-
-	public float SpeedHorizontal 
-	{
-		get { return speedHorizontal; }
-		set { speedHorizontal = value; }
-	}
-
-	public bool Keyboard 
-	{
-		get { return keyboard; }
-		set { keyboard = value; }
-	}
 
 	public Canvas WinScreen 
 	{
@@ -63,6 +18,9 @@ public class PlayerController : MonoBehaviour
 	private const float DIRECTION_UP = 1;
 	private const float DIRECTION_DOWN = -1;
 	private const float DIRECTION_MOVE_HORIZONTAL = 1;
+	private const float SPEED_UP_PLAYER = 2.5f;
+	private const float SPEED_DOWN_PLAYER = 1.5f;
+	private const float SPEED_HORIZONTAL_PLAYER = 3f;
 
 	private Rigidbody2D playerRb;
 	private Death death;
@@ -102,7 +60,7 @@ public class PlayerController : MonoBehaviour
 	// Choose keyboard or touch
 	private void ChooseConsole () 
 	{
-		if (!keyboard) 
+		if (!GameSystem.instance.Keyboard) 
 		{
 			CheckTouch ();
 		} 
@@ -144,7 +102,7 @@ public class PlayerController : MonoBehaviour
 	// Check game goal
 	private void CheckGameGoal () 
 	{
-		if (playerRb.position.x < gameGoal) 
+		if (playerRb.position.x < GameSystem.instance.GameGoal) 
 		{
 			Move ();
 		} 
@@ -171,17 +129,17 @@ public class PlayerController : MonoBehaviour
 	// Player Move
 	private void Move () 
 	{
-		float moveToHorizontal = DIRECTION_MOVE_HORIZONTAL * speedHorizontal;
+		float moveToHorizontal = DIRECTION_MOVE_HORIZONTAL * SPEED_HORIZONTAL_PLAYER;
 
 		PlayerUpOrDown ();
 
 		if (directionMoveVertical == DIRECTION_UP) 
 		{
-			playerRb.velocity = new Vector2 (moveToHorizontal, directionMoveVertical * speedUp);
+			playerRb.velocity = new Vector2 (moveToHorizontal, directionMoveVertical * SPEED_UP_PLAYER);
 		} 
 		else 
 		{
-			playerRb.velocity = new Vector2 (moveToHorizontal, directionMoveVertical * speedDown);
+			playerRb.velocity = new Vector2 (moveToHorizontal, directionMoveVertical * SPEED_DOWN_PLAYER);
 		}
 	}
 
