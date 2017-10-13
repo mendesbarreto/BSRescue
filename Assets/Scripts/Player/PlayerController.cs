@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 	private const float SPEED_HORIZONTAL_PLAYER = 3f;
 
 	private Death death;
-	private PlayerGameStatus playerConfig;
+	private InputController inputController;
 	private Rigidbody2D playerRb;
 
 	private float moveToHorizontal;
@@ -26,13 +26,13 @@ public class PlayerController : MonoBehaviour
 	private void LoadResources () 
 	{
 		playerRb = GetComponent<Rigidbody2D> ();
-		playerConfig = GetComponent<PlayerGameStatus> ();
+		inputController = GetComponent<InputController> ();
 	}
 
 	// Select direction of the player (up or down)
 	private void DirectionVertical () 
 	{
-		if (playerConfig.PressKeyToPlay) 
+		if (inputController.PressKeyToPlay) 
 		{
 			moveToVertical = DIRECTION_UP * SPEED_UP_PLAYER;
 		} 

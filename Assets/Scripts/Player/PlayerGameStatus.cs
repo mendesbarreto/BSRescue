@@ -8,23 +8,12 @@ public class PlayerGameStatus : MonoBehaviour
 	private float gameGoal = 15;
 
 	[SerializeField]
-	private bool isKeyboard;
-
-	[SerializeField]
 	private Canvas winScreen;
-
-	private bool pressKeyToPlay;
 
 	public float GameGoal 
 	{
 		get { return gameGoal; }
 		set { gameGoal = value; }
-	}
-
-	public bool IsKeyboard 
-	{
-		get { return isKeyboard; }
-		set { isKeyboard = value; }
 	}
 
 	public Canvas WinScreen 
@@ -33,52 +22,43 @@ public class PlayerGameStatus : MonoBehaviour
 		set { winScreen = value; }
 	}
 
-	public bool PressKeyToPlay 
-	{
-		get { return pressKeyToPlay; }
-		set { pressKeyToPlay = value; }
-	}
-
-
-	private const string KEY_KEYBOARD = "space";
-	private const float ZERO_TOUCH = 0;
-
-	private float amountTouch;
 	private bool gameStart;
 
 	private PlayerController playerController;
 	private Rigidbody2D playerRb;
+	private InputController inputController;
 
-	private void Awake ()
+	private void Start ()
 	{
-		playerController = GetComponent<PlayerController> ();
-		winScreen.enabled = false;
-		playerRb = GetComponent<Rigidbody2D> ();
+		LoadResources ();
 	}
 
 	private void Update ()
 	{
-		amountTouch = Input.touches.Length;
-		ChooseConsole ();
 		SetStartGame ();
 	}
 
 	private void FixedUpdate ()
 	{
-		// First Check if Game Start
 		CheckGameStart ();
 	}
 
-	// Choose keyboard or touch
-	private void ChooseConsole () 
+	private void LoadResources ()
 	{
-		if (!isKeyboard) 
+		winScreen.enabled = false;
+
+		playerController = GetComponent<PlayerController> ();
+		inputController = GetComponent<InputController> ();
+
+		playerRb = GetComponent<Rigidbody2D> ();
+	}
+
+	// Set Start Game
+	private void SetStartGame () 
+	{
+		if (inputController.PressKeyToPlay)
 		{
-			CheckTouch ();
-		} 
-		else 
-		{
-			pressKeyToPlay = Input.GetKey (KEY_KEYBOARD);
+			gameStart = true;
 		}
 	}
 
@@ -91,25 +71,6 @@ public class PlayerGameStatus : MonoBehaviour
 		}
 	}
 
-	private void CheckTouch () 
-	{
-		if (amountTouch > ZERO_TOUCH) {
-			pressKeyToPlay = true;
-		} 
-		else 
-		{
-			pressKeyToPlay = false;
-		}
-	}
-
-	// Set Start Game
-	private void SetStartGame () 
-	{
-		if (pressKeyToPlay) {
-			gameStart = true;
-		}
-	}
-
 	// Check game goal
 	private void CheckGameGoal () 
 	{
@@ -119,9 +80,13 @@ public class PlayerGameStatus : MonoBehaviour
 		} 
 		else 
 		{
-			winScreen.enabled = true;
-			playerController.StopPlayer ();
+			WinGame ();
 		}
 	}
 
+	private void WinGame ()
+	{
+		winScreen.enabled = true;
+		playerController.StopPlayer ();
+	}
 }
