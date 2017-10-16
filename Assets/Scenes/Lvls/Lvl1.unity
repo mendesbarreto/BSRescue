@@ -313,6 +313,11 @@ Prefab:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 339156391}
+    - target: {fileID: 114147186442110060, guid: ca4d9d820ed7040caa84d20b118161cb,
+        type: 2}
+      propertyPath: speedCenario
+      value: -2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca4d9d820ed7040caa84d20b118161cb, type: 2}
   m_IsPrefabParent: 0

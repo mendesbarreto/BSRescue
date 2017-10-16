@@ -152,9 +152,27 @@ Prefab:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 1559585273}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114147186442110060, guid: ca4d9d820ed7040caa84d20b118161cb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ca4d9d820ed7040caa84d20b118161cb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &245272323 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1288120301513256, guid: ca4d9d820ed7040caa84d20b118161cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 245272322}
+--- !u!114 &245272324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245272323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6269e88750442de902170f002f5fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedCenario: 2
 --- !u!1 &294031873
 GameObject:
   m_ObjectHideFlags: 0
