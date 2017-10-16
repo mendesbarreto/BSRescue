@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class FuelController : MonoBehaviour 
+public sealed class FuelItem : MonoBehaviour 
 {
 	private void OnTriggerEnter2D(Collider2D collider) 
 	{
 		if(collider.gameObject.tag == Constants.instance.PlayerTagName) 
 		{
-			Destroy(gameObject);
+            gameObject.SetActive(false);
 		}
 	}
 }
