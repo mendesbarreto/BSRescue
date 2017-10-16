@@ -7,7 +7,7 @@ public sealed class DeathScreen : MonoBehaviour
 {
 	public void MenuPress()
 	{
-		SceneManager.LoadScene(Constants.instance.MainMenuSceneName);
+        SceneManager.LoadScene(Constants.SceneName.MAIN_MENU);
 	}
 
 	public void RestartPress()

@@ -25,7 +25,7 @@ public sealed class CameraFollow : MonoBehaviour
 	private void LoadResorces() 
 	{
 		currentCameraPositionZ = transform.position.z;
-		objPlayer = GameObject.FindWithTag(Constants.instance.PlayerObjName);
+        objPlayer = GameObject.FindWithTag(Constants.ObjectName.PLAYER);
 	}
 
 	// move camera

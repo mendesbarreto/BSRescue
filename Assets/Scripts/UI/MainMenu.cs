@@ -7,7 +7,7 @@ public sealed class MainMenu : MonoBehaviour
 {
 	public void PlayPress() 
 	{
-		SceneManager.LoadScene(Constants.instance.SelectLvlSceneName);
+        SceneManager.LoadScene(Constants.SceneName.SELECT_LVL);
 	}
 
 	public void QuitPress() 

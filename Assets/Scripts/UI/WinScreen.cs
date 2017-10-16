@@ -7,6 +7,6 @@ public sealed class WinScreen : MonoBehaviour
 {
 	public void ContinueButton() 
 	{
-		SceneManager.LoadScene(Constants.instance.SelectLvlSceneName);
+        SceneManager.LoadScene(Constants.SceneName.SELECT_LVL);
 	}
 }

@@ -8,7 +8,7 @@ public sealed class SelectLvl : MonoBehaviour
 	// on click button lvl
 	public void ClickSelectLvl(string numberLvl) 
 	{
-		string nameScenelvl = Constants.instance.LvlSceneName + numberLvl;
+        string nameScenelvl = Constants.SceneName.LVL + numberLvl;
 
 		SceneManager.LoadScene(nameScenelvl);
 	}
