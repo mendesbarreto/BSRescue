@@ -15,12 +15,6 @@ public class InputController : MonoBehaviour {
 		set { pressKeyToPlay = value; }
 	}
 
-	public bool IsKeyboard 
-	{
-		get { return isKeyboard; }
-		set { isKeyboard = value; }
-	}
-
 	private const string KEY_KEYBOARD = "space";
 	private const float ZERO_TOUCH = 0;
 

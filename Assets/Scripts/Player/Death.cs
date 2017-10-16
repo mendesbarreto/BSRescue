@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Death : MonoBehaviour 
 {
-	public Canvas DeathScreen 
-	{
-		get { return deathScreen; }
-		set { deathScreen = value; }
-	}
-
 	[SerializeField]
 	private Canvas deathScreen;
 

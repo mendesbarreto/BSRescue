@@ -8,12 +8,6 @@ public sealed class SplashScreen : MonoBehaviour
 	[SerializeField]
 	private float secondsToChange = 2;
 
-	public float SecondsToChange 
-	{
-		get { return secondsToChange; }
-		set { secondsToChange = value; }
-	}
-
 	private void Start () 
 	{
 		StartCoroutine ("Countdown");

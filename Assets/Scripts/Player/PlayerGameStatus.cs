@@ -10,12 +10,6 @@ public class PlayerGameStatus : MonoBehaviour
 	[SerializeField]
 	private Canvas winScreen;
 
-	public float GameGoal 
-	{
-		get { return gameGoal; }
-		set { gameGoal = value; }
-	}
-
 	public Canvas WinScreen 
 	{
 		get { return winScreen; }
