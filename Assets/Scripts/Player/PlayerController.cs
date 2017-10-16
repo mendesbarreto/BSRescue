@@ -18,21 +18,21 @@ public class PlayerController : MonoBehaviour
 	private float moveToHorizontal;
 	private float moveToVertical;
 
-	private void Start () 
+	private void Start() 
 	{
-		LoadResources ();
+		LoadResources();
 	}
 
-	private void LoadResources () 
+	private void LoadResources() 
 	{
-		playerRb = GetComponent<Rigidbody2D> ();
-		inputController = GetComponent<InputController> ();
+		playerRb = GetComponent<Rigidbody2D>();
+		inputController = GetComponent<InputController>();
 	}
 
 	// Select direction of the player (up or down)
-	private void DirectionVertical () 
+	private void DirectionVertical() 
 	{
-		if (inputController.PressKeyToPlay) 
+		if(inputController.PressKeyToPlay) 
 		{
 			moveToVertical = DIRECTION_UP * SPEED_UP_PLAYER;
 		} 
@@ -43,17 +43,17 @@ public class PlayerController : MonoBehaviour
 	}
 
 	// Player Move
-	public void Move () 
+	public void Move() 
 	{
 		moveToHorizontal = DIRECTION_MOVE_HORIZONTAL * SPEED_HORIZONTAL_PLAYER;
 
-		DirectionVertical ();
+		DirectionVertical();
 
-		playerRb.velocity = new Vector2 (moveToHorizontal, moveToVertical);
+		playerRb.velocity = new Vector2(moveToHorizontal, moveToVertical);
 	}
 
 	// Player Stop
-	public void StopPlayer () 
+	public void StopPlayer() 
 	{
 		playerRb.velocity = Vector2.zero;
 	}

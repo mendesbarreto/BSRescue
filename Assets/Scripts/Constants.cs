@@ -51,7 +51,7 @@ public class Constants : MonoBehaviour
 
 	public static Constants instance;
 
-	private void Awake () 
+	private void Awake() 
 	{
 		instance = this;
 		DontDestroyOnLoad(transform.gameObject);

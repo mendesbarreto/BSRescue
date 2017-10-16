@@ -22,65 +22,65 @@ public class PlayerGameStatus : MonoBehaviour
 	private Rigidbody2D playerRb;
 	private InputController inputController;
 
-	private void Start ()
+	private void Start()
 	{
-		LoadResources ();
+		LoadResources();
 	}
 
-	private void Update ()
+	private void Update()
 	{
-		SetStartGame ();
+		SetStartGame();
 	}
 
-	private void FixedUpdate ()
+	private void FixedUpdate()
 	{
-		CheckGameStart ();
+		CheckGameStart();
 	}
 
-	private void LoadResources ()
+	private void LoadResources()
 	{
 		winScreen.enabled = false;
 
-		playerController = GetComponent<PlayerController> ();
-		inputController = GetComponent<InputController> ();
+		playerController = GetComponent<PlayerController>();
+		inputController = GetComponent<InputController>();
 
-		playerRb = GetComponent<Rigidbody2D> ();
+		playerRb = GetComponent<Rigidbody2D>();
 	}
 
 	// Set Start Game
-	private void SetStartGame () 
+	private void SetStartGame() 
 	{
-		if (inputController.PressKeyToPlay)
+		if(inputController.PressKeyToPlay)
 		{
 			gameStart = true;
 		}
 	}
 
 	// check if game start
-	private void CheckGameStart ()
+	private void CheckGameStart()
 	{
-		if (gameStart) 
+		if(gameStart) 
 		{
-			CheckGameGoal ();
+			CheckGameGoal();
 		}
 	}
 
 	// Check game goal
-	private void CheckGameGoal () 
+	private void CheckGameGoal() 
 	{
-		if (playerRb.position.x < gameGoal) 
+		if(playerRb.position.x < gameGoal) 
 		{
-			playerController.Move ();
+			playerController.Move();
 		} 
 		else 
 		{
-			WinGame ();
+			WinGame();
 		}
 	}
 
-	private void WinGame ()
+	private void WinGame()
 	{
 		winScreen.enabled = true;
-		playerController.StopPlayer ();
+		playerController.StopPlayer();
 	}
 }

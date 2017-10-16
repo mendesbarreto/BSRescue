@@ -14,15 +14,15 @@ public class PlayerLimitMove : MonoBehaviour
 	private float currentPlayerPositionY;
 	private float currentPlayerPositionZ;
 
-	private void Update () 
+	private void Update() 
 	{
-		CurrentPositions ();
+		CurrentPositions();
 
-		PlayerLimitOnScreen ();
+		PlayerLimitOnScreen();
 	}
 
 	// Get current points position (x, y, z) of player
-	private void CurrentPositions () 
+	private void CurrentPositions() 
 	{
 		currentPlayerPositionX = transform.position.x;
 		currentPlayerPositionY = transform.position.y;
@@ -30,13 +30,13 @@ public class PlayerLimitMove : MonoBehaviour
 	}
 
 	// Limit player on screen
-	private void PlayerLimitOnScreen () 
+	private void PlayerLimitOnScreen() 
 	{
-		float limitY = Mathf.Clamp (currentPlayerPositionY,
-			LimitYOnScreen (MIN_LIMIT),
-			LimitYOnScreen (MAX_LIMIT));
+		float limitY = Mathf.Clamp(currentPlayerPositionY,
+			LimitYOnScreen(MIN_LIMIT),
+			LimitYOnScreen(MAX_LIMIT));
 
-		Vector3 limitVector = new Vector3 (currentPlayerPositionX,
+		Vector3 limitVector = new Vector3(currentPlayerPositionX,
 			limitY,
 			currentPlayerPositionZ);
 
@@ -44,23 +44,23 @@ public class PlayerLimitMove : MonoBehaviour
 	}
 
 	// Limit Y position to screen
-	private float LimitYOnScreen (string typeOfLimit) 
+	private float LimitYOnScreen(string typeOfLimit) 
 	{
-		SelectReferenceYPosition (typeOfLimit);
+		SelectReferenceYPosition(typeOfLimit);
 
-		Vector3 referencePoints = new Vector3 (REFERENCE_X_POSITION,
+		Vector3 referencePoints = new Vector3(REFERENCE_X_POSITION,
 			referenceYPosition,
 			REFERENCE_Z_POSITION);
 
-		float limitY = Camera.main.ViewportToWorldPoint (referencePoints).y;
+		float limitY = Camera.main.ViewportToWorldPoint(referencePoints).y;
 
 		return limitY;
 	}
 
 	// Select Reference Y position
-	private float SelectReferenceYPosition (string typeOfLimit) 
+	private float SelectReferenceYPosition(string typeOfLimit) 
 	{
-		if (typeOfLimit == MIN_LIMIT) {
+		if(typeOfLimit == MIN_LIMIT) {
 			referenceYPosition = 0;
 		} else {
 			referenceYPosition = 1;

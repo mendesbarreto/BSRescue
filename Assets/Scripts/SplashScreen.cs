@@ -8,15 +8,15 @@ public sealed class SplashScreen : MonoBehaviour
 	[SerializeField]
 	private float secondsToChange = 2;
 
-	private void Start () 
+	private void Start() 
 	{
-		StartCoroutine ("Countdown");
+		StartCoroutine("Countdown");
 	}
 
 	// Wait some seconds and then change scene
-	private IEnumerator Countdown () 
+	private IEnumerator Countdown() 
 	{
-		yield return new WaitForSeconds (secondsToChange);
-		SceneManager.LoadScene (Constants.instance.MainMenuSceneName);
+		yield return new WaitForSeconds(secondsToChange);
+		SceneManager.LoadScene(Constants.instance.MainMenuSceneName);
 	}
 }

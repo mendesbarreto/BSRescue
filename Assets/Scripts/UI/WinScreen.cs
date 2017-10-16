@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour 
 {
-	public void ContinueButton () 
+	public void ContinueButton() 
 	{
-		SceneManager.LoadScene (Constants.instance.SelectLvlSceneName);
+		SceneManager.LoadScene(Constants.instance.SelectLvlSceneName);
 	}
 }

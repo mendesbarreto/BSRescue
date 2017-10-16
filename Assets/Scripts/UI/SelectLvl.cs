@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class SelectLvl : MonoBehaviour 
 {
 	// on click button lvl
-	public void ClickSelectLvl (string numberLvl) 
+	public void ClickSelectLvl(string numberLvl) 
 	{
 		string nameScenelvl = Constants.instance.LvlSceneName + numberLvl;
 
-		SceneManager.LoadScene (nameScenelvl);
+		SceneManager.LoadScene(nameScenelvl);
 	}
 }

@@ -20,28 +20,28 @@ public class InputController : MonoBehaviour {
 
 	private float amountTouch;
 
-	private void Update ()
+	private void Update()
 	{
 		amountTouch = Input.touches.Length;
-		ChooseConsole ();
+		ChooseConsole();
 	}
 
 	// Choose keyboard or touch
-	private void ChooseConsole () 
+	private void ChooseConsole() 
 	{
-		if (!isKeyboard) 
+		if(!isKeyboard) 
 		{
-			CheckTouch ();
+			CheckTouch();
 		} 
 		else 
 		{
-			pressKeyToPlay = Input.GetKey (KEY_KEYBOARD);
+			pressKeyToPlay = Input.GetKey(KEY_KEYBOARD);
 		}
 	}
 
-	private void CheckTouch () 
+	private void CheckTouch() 
 	{
-		if (amountTouch > ZERO_TOUCH) 
+		if(amountTouch > ZERO_TOUCH) 
 		{
 			pressKeyToPlay = true;
 		} 

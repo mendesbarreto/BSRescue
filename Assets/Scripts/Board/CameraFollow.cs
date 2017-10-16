@@ -16,7 +16,7 @@ public sealed class CameraFollow : MonoBehaviour
 
 	private void Start()
 	{
-		LoadResorces ();
+		LoadResorces();
 	}
 
 	private void Update()
@@ -24,7 +24,7 @@ public sealed class CameraFollow : MonoBehaviour
 		MoveCamera();  
 	}
 
-	private void LoadResorces () 
+	private void LoadResorces() 
 	{
 		currentCameraPositionZ = transform.position.z;
 		objPlayer = GameObject.FindWithTag(Constants.instance.PlayerObjName);
@@ -33,13 +33,13 @@ public sealed class CameraFollow : MonoBehaviour
 	// move camera
 	private void MoveCamera()
 	{
-		transform.position = new Vector3(LimitMoveXWithPlayer (),
+		transform.position = new Vector3(LimitMoveXWithPlayer(),
 			CAMERA_POSITION_Y,
 			currentCameraPositionZ);
 	}
 
 	// limiting move in x with the move of player
-	private float LimitMoveXWithPlayer () 
+	private float LimitMoveXWithPlayer() 
 	{
 		float playerXPosition = objPlayer.transform.position.x;
 		float moveIn = Mathf.Clamp(playerXPosition, minX, maxX);

@@ -22,7 +22,7 @@ public class Background : MonoBehaviour
 	}
 
 	// Set velocity x on background
-	private float VelocityBGInX () 
+	private float VelocityBGInX() 
 	{
 		float PositionXCamera = Camera.main.gameObject.transform.position.x;
 		float velocityBG = PositionXCamera / speedCenario;
