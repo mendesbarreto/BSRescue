@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputController : MonoBehaviour {
+public sealed class InputController : MonoBehaviour {
 
 	private bool pressKeyToPlay;
 

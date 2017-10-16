@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour 
+public sealed class PlayerController : MonoBehaviour 
 {
 	private const float DIRECTION_UP = 1;
 	private const float DIRECTION_DOWN = -1;
