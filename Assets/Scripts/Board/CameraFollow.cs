@@ -4,14 +4,12 @@ using UnityEngine;
 
 public sealed class CameraFollow : MonoBehaviour 
 {
-	[SerializeField]
-	private float maxX;
-	[SerializeField]
-	private float minX;
-
-	private GameObject objPlayer;
-
+    private float MAX_X = 100f;
+    private float MIN_X = 0f;
 	private float CAMERA_POSITION_Y = 0;
+
+    private GameObject objPlayer;
+
 	private float currentCameraPositionZ;
 
 	private void Start()
@@ -33,16 +31,16 @@ public sealed class CameraFollow : MonoBehaviour
 	// move camera
 	private void MoveCamera()
 	{
-		transform.position = new Vector3(LimitMoveXWithPlayer(),
+        transform.position = new Vector3(LimitHorizontalMoveWithPlayer(),
 			CAMERA_POSITION_Y,
 			currentCameraPositionZ);
 	}
 
 	// limiting move in x with the move of player
-	private float LimitMoveXWithPlayer() 
+	private float LimitHorizontalMoveWithPlayer() 
 	{
-		float playerXPosition = objPlayer.transform.position.x;
-		float moveIn = Mathf.Clamp(playerXPosition, minX, maxX);
+		float playerHorizontalPosition = objPlayer.transform.position.x;
+        float moveIn = Mathf.Clamp(playerHorizontalPosition, MIN_X, MAX_X);
 
 		return moveIn;
 	}
