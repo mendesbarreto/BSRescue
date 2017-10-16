@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
 	private const float SPEED_DOWN_PLAYER = 1.5f;
 	private const float SPEED_HORIZONTAL_PLAYER = 3f;
 
-	private Death death;
 	private InputController inputController;
 	private Rigidbody2D playerRb;
 
