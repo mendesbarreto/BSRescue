@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour 
+public sealed class Death : MonoBehaviour 
 {
 	[SerializeField]
 	private Canvas deathScreen;

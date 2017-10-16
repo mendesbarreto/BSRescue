@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerGameStatus : MonoBehaviour 
+public sealed class PlayerGameStatus : MonoBehaviour 
 {
 	[SerializeField]
 	private float gameGoal = 15;

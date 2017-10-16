@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WinScreen : MonoBehaviour 
+public sealed class WinScreen : MonoBehaviour 
 {
 	public void ContinueButton() 
 	{

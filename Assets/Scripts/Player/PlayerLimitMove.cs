@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLimitMove : MonoBehaviour 
+public sealed class PlayerLimitMove : MonoBehaviour 
 {	
 	private const float REFERENCE_X_POSITION = 0;
 	private const float REFERENCE_Z_POSITION = 0;

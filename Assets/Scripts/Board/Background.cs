@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Background : MonoBehaviour 
+public sealed class Background : MonoBehaviour 
 {
 	[SerializeField]
 	private float speedCenario;

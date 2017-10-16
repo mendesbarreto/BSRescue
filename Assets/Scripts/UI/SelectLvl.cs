@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SelectLvl : MonoBehaviour 
+public sealed class SelectLvl : MonoBehaviour 
 {
 	// on click button lvl
 	public void ClickSelectLvl(string numberLvl) 

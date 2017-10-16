@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathScreen : MonoBehaviour 
+public sealed class DeathScreen : MonoBehaviour 
 {
 	public void MenuPress()
 	{
