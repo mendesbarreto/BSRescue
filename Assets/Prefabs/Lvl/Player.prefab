@@ -9,24 +9,25 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1212988657234990}
+  m_RootGameObject: {fileID: 1621784680960650}
   m_IsPrefabParent: 1
---- !u!1 &1212988657234990
+--- !u!1 &1621784680960650
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4223148418035442}
-  - component: {fileID: 212613800555834486}
-  - component: {fileID: 50478949429023790}
-  - component: {fileID: 60042814255293164}
-  - component: {fileID: 114518857747249670}
-  - component: {fileID: 114160828698976822}
-  - component: {fileID: 114243422968426768}
-  - component: {fileID: 114312898272072820}
-  - component: {fileID: 114023308380821506}
+  - component: {fileID: 4913616943542164}
+  - component: {fileID: 212536236963123468}
+  - component: {fileID: 50383272807922338}
+  - component: {fileID: 60164676380767950}
+  - component: {fileID: 114031120671206462}
+  - component: {fileID: 114673084337683962}
+  - component: {fileID: 114934667702896472}
+  - component: {fileID: 114741956721582074}
+  - component: {fileID: 114330254019923908}
+  - component: {fileID: 114501230826007840}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -34,12 +35,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4223148418035442
+--- !u!4 &4913616943542164
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.172, y: -3.16, z: 0}
   m_LocalScale: {x: 0.1419533, y: 0.073346965, z: 1}
@@ -47,13 +48,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50478949429023790
+--- !u!50 &50383272807922338
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -67,12 +68,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &60042814255293164
+--- !u!60 &60164676380767950
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -95,46 +96,59 @@ PolygonCollider2D:
       - {x: -7.5, y: -7.5}
       - {x: 7.5, y: -7.5}
       - {x: 7.5, y: 7.5}
---- !u!114 &114023308380821506
+--- !u!114 &114031120671206462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21f498bce6084ce689b014737692dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathScreen: {fileID: 0}
+--- !u!114 &114330254019923908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621784680960650}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bc5d382959b044b79ee37736c227f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isKeyboard: 1
---- !u!114 &114160828698976822
+--- !u!114 &114501230826007840
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70baa2e0ce8574d7fa5bb3a52dd1ce77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFuel: 0
+--- !u!114 &114673084337683962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621784680960650}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d4a08e465c0247628fb143f36b00c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114243422968426768
+--- !u!114 &114741956721582074
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30392448e7b66459bb1030caeb7b2ea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114312898272072820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aa3ac49b302e43d8813f2c31240b54a, type: 3}
@@ -142,24 +156,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameGoal: 15
   winScreen: {fileID: 0}
---- !u!114 &114518857747249670
+--- !u!114 &114934667702896472
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21f498bce6084ce689b014737692dce, type: 3}
+  m_Script: {fileID: 11500000, guid: 30392448e7b66459bb1030caeb7b2ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScreen: {fileID: 0}
---- !u!212 &212613800555834486
+--- !u!212 &212536236963123468
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212988657234990}
+  m_GameObject: {fileID: 1621784680960650}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
