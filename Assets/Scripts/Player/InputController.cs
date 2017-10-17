@@ -39,7 +39,7 @@ public sealed class InputController : MonoBehaviour {
 		}
 	}
 
-	private void CheckTouch() 
+    private void CheckTouch() 
 	{
 		if(amountTouch > ZERO_TOUCH) 
 		{

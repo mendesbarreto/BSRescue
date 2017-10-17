@@ -10,13 +10,19 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	[SerializeField]
 	private Canvas winScreen;
 
+    private bool gameStart;
+
 	public Canvas WinScreen 
 	{
 		get { return winScreen; }
 		set { winScreen = value; }
 	}
 
-	private bool gameStart;
+    public bool GameStart
+    {
+        get { return gameStart; }
+        set { gameStart = value; }
+    }
 
 	private PlayerController playerController;
 	private Rigidbody2D playerRb;
@@ -34,7 +40,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		CheckGameStart();
+        SetCheckerGameGoal();
 	}
 
 	private void LoadResources()
@@ -57,7 +63,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	}
 
 	// check if game start
-	private void CheckGameStart()
+    private void SetCheckerGameGoal()
 	{
 		if(gameStart) 
 		{
