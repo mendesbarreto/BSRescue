@@ -4,9 +4,6 @@ using UnityEngine;
 
 public sealed class FuelItem : MonoBehaviour 
 {
-    private float NUMBER_ADD_FUEL = 10f;
-    private float MAX_FUEL = 100f;
-
     private GameObject player;
     private FuelController fuelController;
 
@@ -22,7 +19,7 @@ public sealed class FuelItem : MonoBehaviour
         player = GameObject.FindGameObjectWithTag(Constants.TagName.PLAYER);
         fuelController = player.GetComponent<FuelController>();
 
-        maxToAdd = MAX_FUEL - NUMBER_ADD_FUEL;
+        maxToAdd = Constants.Fuel.MAX_FUEL - Constants.Fuel.NUMBER_ADD_FUEL;
     }
 
     private void OnTriggerEnter2D(Collider2D collider) 
@@ -38,11 +35,11 @@ public sealed class FuelItem : MonoBehaviour
     {
         if (fuelController.CurrentFuel >= maxToAdd)
         {
-            fuelController.CurrentFuel = MAX_FUEL;
+            fuelController.CurrentFuel = Constants.Fuel.MAX_FUEL;
         }
         else
         {
-            fuelController.CurrentFuel += NUMBER_ADD_FUEL;
+            fuelController.CurrentFuel += Constants.Fuel.NUMBER_ADD_FUEL;
         }
     }
 }

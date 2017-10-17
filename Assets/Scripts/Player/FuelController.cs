@@ -4,10 +4,6 @@ using UnityEngine;
 
 public sealed class FuelController : MonoBehaviour 
 {
-    private const float MAX_FUEL = 100f;
-    private const float MIN_FUEL = 0f;
-    private const float SECONDS_TO_SPEND = .1f;
-
     private PlayerGameStatus playerGameStatus;
     private InputController inputController;
 
@@ -27,15 +23,15 @@ public sealed class FuelController : MonoBehaviour
         LoadResources();
 	}
 	
-	private void Update() 
+	private void Update()
     {
         SetUseFuel();
 	}
 
     private void LoadResources()
     {
-        timeToSpend = SECONDS_TO_SPEND;
-        currentFuel = MAX_FUEL;
+        timeToSpend = Constants.Fuel.SECONDS_TO_SPEND;
+        currentFuel = Constants.Fuel.MAX_FUEL;
         playerGameStatus = GetComponent<PlayerGameStatus>();
         inputController = GetComponent<InputController>();
     }
@@ -71,6 +67,6 @@ public sealed class FuelController : MonoBehaviour
     private void SpendFuel()
     {
         currentFuel -= 1;
-        timeToSpend = SECONDS_TO_SPEND;
+        timeToSpend = Constants.Fuel.SECONDS_TO_SPEND;
     }
 }

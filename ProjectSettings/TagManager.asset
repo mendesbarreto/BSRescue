@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fuel
   - Floor
+  - Bar
   layers:
   - Default
   - TransparentFX
