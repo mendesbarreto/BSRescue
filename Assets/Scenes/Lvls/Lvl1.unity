@@ -457,6 +457,41 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 339156395}
+    - target: {fileID: 114373678621657666, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224259464037156444, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -655
+      objectReference: {fileID: 0}
+    - target: {fileID: 224259464037156444, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 192.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224052949561427444, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -657.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 224052949561427444, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 192.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224188495329407592, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 42.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 224188495329407592, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 193.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5fb73693a89d48fe8d7eb0552fd16d0, type: 2}
   m_IsPrefabParent: 0
@@ -581,6 +616,11 @@ Prefab:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 92018234}
+    - target: {fileID: 114330254019923908, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: isKeyboard
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
