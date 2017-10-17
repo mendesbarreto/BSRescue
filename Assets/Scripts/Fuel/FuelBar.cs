@@ -7,6 +7,7 @@ public sealed class FuelBar : MonoBehaviour
     private RectTransform background;
     private GameObject player;
     private FuelController fuelController;
+    private PlayerGameStatus playerGameStatus;
 
     private float positionVerticalBackground;
 
@@ -17,7 +18,7 @@ public sealed class FuelBar : MonoBehaviour
 	
 	private void Update () 
     {
-        ChangeBackgroundWidth();
+        CheckWinScreen();
 	}
 
     private void LoadResources()
@@ -25,8 +26,17 @@ public sealed class FuelBar : MonoBehaviour
         background = GetComponent<RectTransform>();
         player = GameObject.FindGameObjectWithTag(Constants.TagName.PLAYER);
         fuelController = player.GetComponent<FuelController>();
+        playerGameStatus = player.GetComponent<PlayerGameStatus>();
 
         positionVerticalBackground = background.rect.height;
+    }
+
+    private void CheckWinScreen()
+    {
+        if(!playerGameStatus.WinGameBool)
+        {
+            ChangeBackgroundWidth();
+        }
     }
 
     private void ChangeBackgroundWidth()
