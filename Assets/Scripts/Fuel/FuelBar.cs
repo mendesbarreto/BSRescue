@@ -42,10 +42,10 @@ public sealed class FuelBar : MonoBehaviour
 
     private void ChangeFuel()
     {
-        fuelBar.sizeDelta = new Vector2(ChangeWithCurrentFuel(), heightFuelBar);
+        fuelBar.sizeDelta = new Vector2(WidthFuelBar(), heightFuelBar);
     }
 
-    private float ChangeWithCurrentFuel()
+    private float WidthFuelBar()
     {
         float levelFuel = Constants.Fuel.MAX_FUEL - fuelController.CurrentFuel;
 
