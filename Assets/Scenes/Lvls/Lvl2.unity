@@ -495,6 +495,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114399534256790172, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 827883873}
+    - target: {fileID: 114854820581100884, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 1717662414}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
@@ -1496,19 +1506,3 @@ Prefab:
     - {fileID: 114265972258138122, guid: e926a9534d1664c50bfe8444c0732e58, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e926a9534d1664c50bfe8444c0732e58, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2099636915 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1698978657061786, guid: e926a9534d1664c50bfe8444c0732e58,
-    type: 2}
-  m_PrefabInternal: {fileID: 2099636914}
---- !u!114 &2099636916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2099636915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7acd50a6a20944658ee6f63f0415ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
