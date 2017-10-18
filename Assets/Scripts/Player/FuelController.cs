@@ -4,19 +4,20 @@ using UnityEngine;
 
 public sealed class FuelController : MonoBehaviour 
 {
-    private PlayerGameStatus playerGameStatus;
-    private InputController inputController;
-
-    [SerializeField]
     private float currentFuel;
-
-    private float timeToSpend;
 
     public float CurrentFuel
     {
         get { return currentFuel; }
         set { currentFuel = value; }
     }
+
+    private float TIME_OUT = 0;
+
+    private PlayerGameStatus playerGameStatus;
+    private InputController inputController;
+
+    private float timeToSpend;
 
 	private void Start()
     {
@@ -54,7 +55,7 @@ public sealed class FuelController : MonoBehaviour
 
     private void TimerToSpendFuel()
     {
-        if (timeToSpend <= Constants.Fuel.MIN_FUEL)
+        if (timeToSpend <= TIME_OUT)
         {
             SpendFuel();
         }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public sealed class FuelBar : MonoBehaviour 
 {
-    private RectTransform background;
+    private RectTransform fuelBar;
     private GameObject player;
     private FuelController fuelController;
     private PlayerGameStatus playerGameStatus;
 
-    private float positionVerticalBackground;
+    private float heightFuelBar;
 
 	private void Start () 
     {
@@ -23,25 +23,26 @@ public sealed class FuelBar : MonoBehaviour
 
     private void LoadResources()
     {
-        background = GetComponent<RectTransform>();
         player = GameObject.FindGameObjectWithTag(Constants.TagName.PLAYER);
+
+        fuelBar = GetComponent<RectTransform>();
         fuelController = player.GetComponent<FuelController>();
         playerGameStatus = player.GetComponent<PlayerGameStatus>();
 
-        positionVerticalBackground = background.rect.height;
+        heightFuelBar = fuelBar.rect.height;
     }
 
     private void CheckWinScreen()
     {
-        if(!playerGameStatus.WinGameBool)
+        if(!playerGameStatus.WinGameStatus)
         {
-            ChangeBackgroundWidth();
+            ChangeFuel();
         }
     }
 
-    private void ChangeBackgroundWidth()
+    private void ChangeFuel()
     {
-        background.sizeDelta = new Vector2(ChangeWithCurrentFuel(), positionVerticalBackground);
+        fuelBar.sizeDelta = new Vector2(ChangeWithCurrentFuel(), heightFuelBar);
     }
 
     private float ChangeWithCurrentFuel()

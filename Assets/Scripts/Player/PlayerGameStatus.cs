@@ -11,7 +11,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private Canvas winScreen;
 
     private bool gameStart;
-    private bool winGameBool;
+    private bool winGameStatus;
 
 	public Canvas WinScreen 
 	{
@@ -25,10 +25,10 @@ public sealed class PlayerGameStatus : MonoBehaviour
         set { gameStart = value; }
     }
 
-    public bool WinGameBool
+    public bool WinGameStatus
     {
-        get { return winGameBool; }
-        set { winGameBool = value; }
+        get { return winGameStatus; }
+        set { winGameStatus = value; }
     }
 
 	private PlayerController playerController;
@@ -53,7 +53,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private void LoadResources()
 	{
 		winScreen.enabled = false;
-        winGameBool = false;
+        winGameStatus = false;
 
 		playerController = GetComponent<PlayerController>();
 		inputController = GetComponent<InputController>();
@@ -94,7 +94,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 
 	private void WinGame()
 	{
-        winGameBool = true;
+        winGameStatus = true;
 		winScreen.enabled = true;
 		playerController.StopPlayer();
 	}
