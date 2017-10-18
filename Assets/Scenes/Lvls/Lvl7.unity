@@ -512,6 +512,10 @@ Prefab:
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 482631526}
+    - target: {fileID: 4352948539860746, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
@@ -840,6 +844,16 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 223027710170344048, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1702044001}
+    - target: {fileID: 224169661996146496, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 223589867207359798, guid: f5fb73693a89d48fe8d7eb0552fd16d0,
         type: 2}
       propertyPath: m_Camera
       value: 
