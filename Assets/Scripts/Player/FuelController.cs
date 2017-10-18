@@ -16,6 +16,7 @@ public sealed class FuelController : MonoBehaviour
 
     private PlayerGameStatus playerGameStatus;
     private InputController inputController;
+    private Death death;
 
     private float timeToSpend;
 
@@ -27,14 +28,18 @@ public sealed class FuelController : MonoBehaviour
 	private void Update()
     {
         SetUseFuel();
+
+        CheckEndFuel();
 	}
 
     private void LoadResources()
     {
         timeToSpend = Constants.Fuel.SECONDS_TO_SPEND;
         currentFuel = Constants.Fuel.MAX_FUEL;
+
         playerGameStatus = GetComponent<PlayerGameStatus>();
         inputController = GetComponent<InputController>();
+        death = GetComponent<Death>();
     }
 
     private void SetUseFuel()
@@ -69,5 +74,13 @@ public sealed class FuelController : MonoBehaviour
     {
         currentFuel -= Constants.Fuel.FUEL_PER_SECONDS;
         timeToSpend = Constants.Fuel.SECONDS_TO_SPEND;
+    }
+
+    private void CheckEndFuel()
+    {
+        if (currentFuel <= Constants.Fuel.MIN_FUEL)
+        {
+            death.DeathPlayer();
+        }
     }
 }
