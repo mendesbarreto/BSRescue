@@ -54,7 +54,7 @@ public sealed class FuelController : MonoBehaviour
 
     private void TimerToSpendFuel()
     {
-        if (timeToSpend <= 0)
+        if (timeToSpend <= Constants.Fuel.MIN_FUEL)
         {
             SpendFuel();
         }
@@ -66,7 +66,7 @@ public sealed class FuelController : MonoBehaviour
 
     private void SpendFuel()
     {
-        currentFuel -= 1;
+        currentFuel -= Constants.Fuel.FUEL_PER_SECONDS;
         timeToSpend = Constants.Fuel.SECONDS_TO_SPEND;
     }
 }

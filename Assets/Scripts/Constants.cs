@@ -29,6 +29,7 @@ public sealed class Constants
         public const float MIN_FUEL = 0f;
         public const float SECONDS_TO_SPEND = .1f;
         public const float NUMBER_ADD_FUEL = 10f;
+        public const float FUEL_PER_SECONDS = 1f;
 
     }
 }
