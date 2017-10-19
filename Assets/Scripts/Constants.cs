@@ -15,6 +15,7 @@ public sealed class Constants
     {
         public const string FLOOR = "Floor";
         public const string PLAYER = "Player";
+        public const string BUTTON_START = "ButtonStart";
     }
 	
     public sealed class ObjectName
@@ -30,6 +31,16 @@ public sealed class Constants
         public const float SECONDS_TO_SPEND = .1f;
         public const float NUMBER_ADD_FUEL = 10f;
         public const float FUEL_PER_SECONDS = 1f;
+    }
 
+    public sealed class Code
+    {
+        public const string TEXT_RESET = "reset";
+        public const string TEXT_CODE = "testcode";
+        public const string TEXT_GAME_STATS = "gameStats";
+        public const string TEXT_CODE_INCORRECT = "Codigo incorreto";
+        public const string TEXT_MESSAGE_RESET = "RESET - ESTADO: ";
+        public const int NUMBER_TO_LOCK_PLAY_BUTTON = 0;
+        public const int NUMBER_TO_UNLOCK_PLAY_BUTTON = 1;
     }
 }
