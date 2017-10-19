@@ -53,22 +53,17 @@ public class CodeInput : MonoBehaviour
 
     private void ResetCode()
     {
-        MainGame.instance.GameStats = Constants.Code.NUMBER_TO_LOCK_PLAY_BUTTON;
-        MainGame.instance.SetNumberKeyGameStats();
-
+        LockPlayButton();
         PlayerPrefs.DeleteAll();
-
-        messageInput.text = Constants.Code.TEXT_MESSAGE_RESET + MainGame.instance.GameStats;
+        SetResetMessage();
 
         codeScreen.enabled = false;
     }
 
     private void EnterCorrectCode()
     {
-        MainGame.instance.GameStats = Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON;
-
-        codeInputField.text = "";
-        messageInput.text = "";
+        UnlockPlayButton();
+        CleanInputAndMessage();
 
         codeScreen.enabled = false;
     }
@@ -76,5 +71,27 @@ public class CodeInput : MonoBehaviour
     private void EnterIncorrectCode()
     {
         messageInput.text = Constants.Code.TEXT_CODE_INCORRECT;
+    }
+
+    private void LockPlayButton()
+    {
+        MainGame.instance.GameStats = Constants.Code.NUMBER_TO_LOCK_PLAY_BUTTON;
+        MainGame.instance.SetNumberKeyGameStats();
+    }
+
+    private void UnlockPlayButton()
+    {
+        MainGame.instance.GameStats = Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON;
+    }
+
+    private void SetResetMessage()
+    {
+        messageInput.text = Constants.Code.TEXT_MESSAGE_RESET + MainGame.instance.GameStats;
+    }
+
+    private void CleanInputAndMessage()
+    {
+        codeInputField.text = "";
+        messageInput.text = "";
     }
 }
