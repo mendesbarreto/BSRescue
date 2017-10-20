@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc5d382959b044b79ee37736c227f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isKeyboard: 1
+  isKeyboard: 0
 --- !u!114 &114507482982516340
 MonoBehaviour:
   m_ObjectHideFlags: 1
