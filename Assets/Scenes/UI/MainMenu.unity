@@ -469,6 +469,7 @@ MonoBehaviour:
   codeButton: {fileID: 45826166}
   quitButton: {fileID: 2114150268}
   codeScreen: {fileID: 1359348304}
+  textPlayButton: {fileID: 1129920829}
 --- !u!1 &205601178
 GameObject:
   m_ObjectHideFlags: 0

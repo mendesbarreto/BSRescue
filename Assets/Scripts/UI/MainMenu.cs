@@ -18,6 +18,9 @@ public sealed class MainMenu : MonoBehaviour
     [SerializeField]
     private Canvas codeScreen;
 
+    [SerializeField]
+    private Image textPlayButton;
+
     public Button PlayButton
     {
         get { return playButton; }
@@ -40,6 +43,12 @@ public sealed class MainMenu : MonoBehaviour
     {
         get { return codeScreen; }
         set { codeScreen = value; }
+    }
+
+    public Image TextPlayButton
+    {
+        get { return textPlayButton; }
+        set { textPlayButton = value; }
     }
 
     private void Start()
@@ -78,10 +87,12 @@ public sealed class MainMenu : MonoBehaviour
         if (MainGame.instance.GameStats == Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON)
         {
             playButton.interactable = true;
+            textPlayButton.enabled = true;
         }
         else
         {
             playButton.interactable = false;
+            textPlayButton.enabled = false;
         }
     }
 
@@ -101,6 +112,8 @@ public sealed class MainMenu : MonoBehaviour
         quitButton.interactable = false;
         codeButton.interactable = false;
         playButton.interactable = false;
+
+        textPlayButton.enabled = false;
     }
 
 	public void QuitPress() 
