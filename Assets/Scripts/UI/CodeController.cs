@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CodeInput : MonoBehaviour 
+public class CodeController : MonoBehaviour 
 {
     [SerializeField]
     private Canvas codeScreen;
@@ -35,6 +35,13 @@ public class CodeInput : MonoBehaviour
         codeInputField = GetComponent<InputField>();
     }
 
+    public void BackPress()
+    {
+        codeScreen.enabled = false;
+
+        CleanInputAndMessage();
+    }
+
     public void SubmitPress()
     {
         if(codeInputField.text == Constants.Code.TEXT_RESET)
@@ -56,8 +63,6 @@ public class CodeInput : MonoBehaviour
         LockPlayButton();
         PlayerPrefs.DeleteAll();
         SetResetMessage();
-
-        codeScreen.enabled = false;
     }
 
     private void EnterCorrectCode()
