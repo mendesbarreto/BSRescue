@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8ba158f5f8bac48129b151bef47827d0
-timeCreated: 1508505910
+guid: 8900278f7e140493da3ced198012a39e
+timeCreated: 1508515499
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SUBMIT BACK_0
-    21300002: SUBMIT BACK_1
+    21300000: "selec\u0327a\u0303o de fase_0"
+    21300002: "selec\u0327a\u0303o de fase_1"
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -109,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SUBMIT BACK_0
+      name: "selec\u0327a\u0303o de fase_0"
       rect:
         serializedVersion: 2
-        x: 1421
-        y: 1124
-        width: 373
-        height: 90
+        x: 558
+        y: 288
+        width: 1119
+        height: 818
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,13 +123,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SUBMIT BACK_1
+      name: "selec\u0327a\u0303o de fase_1"
       rect:
         serializedVersion: 2
-        x: 1829
-        y: 1124
-        width: 264
-        height: 90
+        x: 2294
+        y: 339
+        width: 810
+        height: 761
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
