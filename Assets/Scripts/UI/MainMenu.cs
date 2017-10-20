@@ -116,6 +116,11 @@ public sealed class MainMenu : MonoBehaviour
         textPlayButton.enabled = false;
     }
 
+    public void CreditsPress()
+    {
+        SceneManager.LoadScene(Constants.SceneName.CREDITS);
+    }
+
 	public void QuitPress() 
 	{
 		Application.Quit();

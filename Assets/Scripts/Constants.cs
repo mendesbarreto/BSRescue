@@ -9,6 +9,7 @@ public sealed class Constants
         public const string MAIN_MENU = "MainMenu";
         public const string SELECT_LVL = "SelectLvl";
         public const string LVL = "Lvl";
+        public const string CREDITS = "Credits";
     }
 	
     public sealed class TagName
