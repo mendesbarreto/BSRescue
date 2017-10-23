@@ -155,12 +155,6 @@ Canvas:
   m_PrefabParentObject: {fileID: 223546698986338646, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
     type: 2}
   m_PrefabInternal: {fileID: 1859303867}
---- !u!114 &92018236 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114094627620460768, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1859303867}
-  m_Script: {fileID: 11500000, guid: 3409c71cbbdfc468f88ddcb9a3ef9a0d, type: 3}
 --- !u!1001 &152784204
 Prefab:
   m_ObjectHideFlags: 0
@@ -262,15 +256,26 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 92018236}
+      objectReference: {fileID: 152784205}
     - target: {fileID: 223847505707673674, guid: 753c215967d7342008ab8aff44c5dcbb,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 339156395}
+    - target: {fileID: 114427805565439968, guid: 753c215967d7342008ab8aff44c5dcbb,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartPress
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 753c215967d7342008ab8aff44c5dcbb, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &152784205 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114760501753299202, guid: 753c215967d7342008ab8aff44c5dcbb,
+    type: 2}
+  m_PrefabInternal: {fileID: 152784204}
+  m_Script: {fileID: 11500000, guid: 8b69fb9e3136d410c932a726284e3321, type: 3}
 --- !u!1001 &179354986
 Prefab:
   m_ObjectHideFlags: 0
@@ -691,6 +696,32 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 339156395}
+    - target: {fileID: 114618667056664268, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859303868}
+    - target: {fileID: 114618667056664268, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229559228423238, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859303868}
+    - target: {fileID: 114229559228423238, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuPress
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfb8c6c0d0c364092a9b7dc1dbde545f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1859303868 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114709469419955402, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1859303867}
+  m_Script: {fileID: 11500000, guid: 8b69fb9e3136d410c932a726284e3321, type: 3}

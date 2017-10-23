@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 223546698986338646}
   - component: {fileID: 114256479849884908}
   - component: {fileID: 114620081162366612}
-  - component: {fileID: 114094627620460768}
+  - component: {fileID: 114709469419955402}
   m_Layer: 5
   m_Name: DeathScreen
   m_TagString: Untagged
@@ -117,17 +117,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114094627620460768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1299693999217248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3409c71cbbdfc468f88ddcb9a3ef9a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114229559228423238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +157,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114094627620460768}
+      - m_Target: {fileID: 114709469419955402}
         m_MethodName: MenuPress
         m_Mode: 1
         m_Arguments:
@@ -242,7 +231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114094627620460768}
+      - m_Target: {fileID: 114709469419955402}
         m_MethodName: RestartPress
         m_Mode: 1
         m_Arguments:
@@ -271,6 +260,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114709469419955402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1299693999217248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b69fb9e3136d410c932a726284e3321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114767532508855658
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -96,11 +96,6 @@ public sealed class MainMenu : MonoBehaviour
         }
     }
 
-    public void PlayPress() 
-	{
-        SceneManager.LoadScene(Constants.SceneName.SELECT_LVL);
-	}
-
     public void CodePress()
     {
         codeScreen.enabled = true;
@@ -115,14 +110,4 @@ public sealed class MainMenu : MonoBehaviour
 
         textPlayButton.enabled = false;
     }
-
-    public void CreditsPress()
-    {
-        SceneManager.LoadScene(Constants.SceneName.CREDITS);
-    }
-
-	public void QuitPress() 
-	{
-		Application.Quit();
-	}
 }

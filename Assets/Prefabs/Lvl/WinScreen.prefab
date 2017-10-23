@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 223847505707673674}
   - component: {fileID: 114341878704307286}
   - component: {fileID: 114716733023826202}
-  - component: {fileID: 114713109910199000}
+  - component: {fileID: 114760501753299202}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114760501753299202}
         m_MethodName: RestartPress
         m_Mode: 1
         m_Arguments:
@@ -339,8 +339,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114713109910199000}
-        m_MethodName: ContinueButton
+      - m_Target: {fileID: 114760501753299202}
+        m_MethodName: PlayPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -379,17 +379,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114713109910199000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1807026614411552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68fc9b9d94f884960a762e294742f557, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114716733023826202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,6 +395,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114760501753299202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1807026614411552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b69fb9e3136d410c932a726284e3321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222525691903239548
 CanvasRenderer:
   m_ObjectHideFlags: 1
