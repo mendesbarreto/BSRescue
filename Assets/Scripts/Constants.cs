@@ -17,6 +17,7 @@ public sealed class Constants
         public const string FLOOR = "Floor";
         public const string PLAYER = "Player";
         public const string BUTTON_START = "ButtonStart";
+        public const string LOADING = "Loading";
     }
 	
     public sealed class ObjectName
@@ -30,7 +31,7 @@ public sealed class Constants
         public const float MAX_FUEL = 100f;
         public const float MIN_FUEL = 0f;
         public const float SECONDS_TO_SPEND = .1f;
-        public const float NUMBER_ADD_FUEL = 10f;
+        public const float NUMBER_ADD_FUEL = 30f;
         public const float FUEL_PER_SECONDS = 1f;
     }
 

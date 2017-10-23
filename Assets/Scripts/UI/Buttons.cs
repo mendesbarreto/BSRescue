@@ -5,6 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject loading;
+
+    public GameObject Loading
+    {
+        get { return loading; }
+        set { loading = value; }
+    }
+
+    private void Start()
+    {
+        loading.SetActive(false);
+    }
+
     public void PlayPress()
     {
         SceneManager.LoadScene(Constants.SceneName.SELECT_LVL);
@@ -29,6 +43,7 @@ public class Buttons : MonoBehaviour {
     {
         string nameScenelvl = Constants.SceneName.LVL + numberLvl;
 
+        loading.SetActive(true);
         SceneManager.LoadScene(nameScenelvl);
     }
 
