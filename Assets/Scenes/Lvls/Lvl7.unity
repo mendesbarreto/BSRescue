@@ -199,6 +199,20 @@ Prefab:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 1566540649}
+    - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114628925784063970, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1566540649}
+    - target: {fileID: 114243439906680766, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 2083514445}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
@@ -511,6 +525,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4630956107938726, guid: ca4d9d820ed7040caa84d20b118161cb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114147186442110060, guid: ca4d9d820ed7040caa84d20b118161cb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ca4d9d820ed7040caa84d20b118161cb, type: 2}
@@ -684,6 +702,10 @@ Prefab:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4550147351943562, guid: e926a9534d1664c50bfe8444c0732e58, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415283654377774, guid: e926a9534d1664c50bfe8444c0732e58, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
