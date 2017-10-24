@@ -22,9 +22,4 @@ public class SelectLvl : MonoBehaviour {
     {
         loading.enabled = false;
     }
-
-    private void OnLevelWasLoaded(int level)
-    {
-        loading.enabled = true;
-    }
 }

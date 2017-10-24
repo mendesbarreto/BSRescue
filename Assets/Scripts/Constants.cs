@@ -10,6 +10,7 @@ public sealed class Constants
         public const string SELECT_LVL = "SelectLvl";
         public const string LVL = "Lvl";
         public const string CREDITS = "Credits";
+        public const string COMIC = "Comic";
     }
 	
     public sealed class TagName

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour {
@@ -14,9 +15,17 @@ public class Buttons : MonoBehaviour {
         set { loading = value; }
     }
 
+    private Text loadingText;
+
     private void Start()
     {
-        loading.SetActive(false);
+        LoadResources();
+    }
+
+    private void LoadResources()
+    {
+        loadingText = loading.GetComponent<Text>();
+        loadingText.enabled = false;
     }
 
     public void PlayPress()
@@ -43,7 +52,7 @@ public class Buttons : MonoBehaviour {
     {
         string nameScenelvl = Constants.SceneName.LVL + numberLvl;
 
-        loading.SetActive(true);
+        loadingText.enabled = true;
         SceneManager.LoadScene(nameScenelvl);
     }
 

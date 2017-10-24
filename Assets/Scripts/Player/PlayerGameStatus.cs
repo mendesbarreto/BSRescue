@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class PlayerGameStatus : MonoBehaviour 
 {
 	[SerializeField]
-	private float gameGoal = 15;
+	private float gameGoal;
 
 	[SerializeField]
 	private Canvas winScreen;
@@ -95,7 +96,9 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private void WinGame()
 	{
         winGameStatus = true;
-		winScreen.enabled = true;
+		//winScreen.enabled = true;
 		playerController.StopPlayer();
+
+        SceneManager.LoadScene(Constants.SceneName.COMIC);
 	}
 }
