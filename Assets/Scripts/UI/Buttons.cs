@@ -6,28 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject loading;
-
-    public GameObject Loading
-    {
-        get { return loading; }
-        set { loading = value; }
-    }
-
-    private Text loadingText;
-
-    private void Start()
-    {
-        LoadResources();
-    }
-
-    private void LoadResources()
-    {
-        loadingText = loading.GetComponent<Text>();
-        loadingText.enabled = false;
-    }
-
     public void PlayPress()
     {
         SceneManager.LoadScene(Constants.SceneName.SELECT_LVL);
@@ -46,14 +24,6 @@ public class Buttons : MonoBehaviour {
     public void QuitPress()
     {
         Application.Quit();   
-    }
-
-    public void SelectedLvlPress(string numberLvl)
-    {
-        string nameScenelvl = Constants.SceneName.LVL + numberLvl;
-
-        loadingText.enabled = true;
-        SceneManager.LoadScene(nameScenelvl);
     }
 
     public void RestartPress()

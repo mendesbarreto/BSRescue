@@ -6,6 +6,7 @@ public sealed class FuelItem : MonoBehaviour
 {
     private GameObject player;
     private FuelController fuelController;
+    private AudioSource audioFuel;
 
     private float maxToAdd;
 
@@ -18,6 +19,7 @@ public sealed class FuelItem : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag(Constants.TagName.PLAYER);
         fuelController = player.GetComponent<FuelController>();
+        audioFuel = player.GetComponent<AudioSource>();
 
         maxToAdd = Constants.Fuel.MAX_FUEL - Constants.Fuel.NUMBER_ADD_FUEL;
     }
@@ -26,6 +28,7 @@ public sealed class FuelItem : MonoBehaviour
 	{
         if(collider.gameObject.tag == Constants.TagName.PLAYER) 
 		{
+            audioFuel.Play();
             AddFuel();
             gameObject.SetActive(false);
 		}

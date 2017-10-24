@@ -31,9 +31,12 @@ public sealed class CameraFollow : MonoBehaviour
 	// move camera
 	private void MoveCamera()
 	{
-        transform.position = new Vector3(LimitHorizontalMoveWithPlayer(),
-			CAMERA_POSITION_Y,
-			currentCameraPositionZ);
+        if(objPlayer != null)
+        {
+            transform.position = new Vector3(LimitHorizontalMoveWithPlayer(),
+            CAMERA_POSITION_Y,
+            currentCameraPositionZ);
+        }
 	}
 
 	// limiting move in x with the move of player

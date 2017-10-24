@@ -11,6 +11,9 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	[SerializeField]
 	private Canvas winScreen;
 
+    [SerializeField]
+    private int currentLevelNumber;
+
     private bool gameStart;
     private bool winGameStatus;
 
@@ -35,6 +38,8 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private PlayerController playerController;
 	private Rigidbody2D playerRb;
 	private InputController inputController;
+
+    private const int MAX_LEVEL_NUMBER = 10;
 
 	private void Start()
 	{
@@ -98,7 +103,17 @@ public sealed class PlayerGameStatus : MonoBehaviour
         winGameStatus = true;
 		//winScreen.enabled = true;
 		playerController.StopPlayer();
+        WhenPlayerWin();
 
         SceneManager.LoadScene(Constants.SceneName.COMIC);
 	}
+
+    private void WhenPlayerWin()
+    {
+        if (LevelControlers.instance.Levels[currentLevelNumber + 1] == 0 && currentLevelNumber < MAX_LEVEL_NUMBER)
+        {
+            LevelControlers.instance.Levels[currentLevelNumber + 1] = 1;
+            PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (currentLevelNumber + 1), LevelControlers.instance.Levels[currentLevelNumber + 1]);
+        }
+    }
 }
