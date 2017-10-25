@@ -29,6 +29,7 @@ public sealed class Death : MonoBehaviour
 
     public void DeathPlayer()
     {
+        SpecialEffect.Instance.Explosion(transform.position);
         Destroy(gameObject);
         deathScreen.enabled = true;
     }
