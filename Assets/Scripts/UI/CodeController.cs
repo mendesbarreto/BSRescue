@@ -80,18 +80,18 @@ public class CodeController : MonoBehaviour
 
     private void LockPlayButton()
     {
-        MainGame.instance.GameStats = Constants.Code.NUMBER_TO_LOCK_PLAY_BUTTON;
-        MainGame.instance.SetNumberKeyGameStats();
+        GameSave.instance.GameStats = Constants.Code.NUMBER_TO_LOCK_PLAY_BUTTON;
+        GameSave.instance.SetNumberKeyGameStats();
     }
 
     private void UnlockPlayButton()
     {
-        MainGame.instance.GameStats = Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON;
+        GameSave.instance.GameStats = Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON;
     }
 
     private void SetResetMessage()
     {
-        messageInput.text = Constants.Code.TEXT_MESSAGE_RESET + MainGame.instance.GameStats;
+        messageInput.text = Constants.Code.TEXT_MESSAGE_RESET + GameSave.instance.GameStats;
     }
 
     private void CleanInputAndMessage()

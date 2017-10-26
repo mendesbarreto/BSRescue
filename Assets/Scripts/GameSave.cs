@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class MainGame : MonoBehaviour 
+public sealed class GameSave : MonoBehaviour 
 {
     private int gameStats;
 
@@ -12,10 +12,15 @@ public sealed class MainGame : MonoBehaviour
         set { gameStats = value; }
     }
 
-    public static MainGame instance;
+    public static GameSave instance;
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogError("Multiple instances of GameSave!");
+        }
+
         instance = this;
     }
 

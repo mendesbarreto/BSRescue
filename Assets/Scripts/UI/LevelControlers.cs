@@ -11,7 +11,7 @@ public class LevelControlers : MonoBehaviour {
         set { levels = value; }
     }
     [SerializeField]
-    private int[] levels = new int[10];
+    private int[] levels = new int[Constants.LevelSave.NUMBER_MAX_LEVELS];
 
 
     public string LevelsKey 
@@ -19,7 +19,7 @@ public class LevelControlers : MonoBehaviour {
         get { return levelsKey;}
     }
     [SerializeField]
-    private static string levelsKey = "Levels ";
+    private static string levelsKey = Constants.LevelSave.TEXT_LEVELS_KEY;
 
     public static LevelControlers instance;
 
@@ -35,17 +35,12 @@ public class LevelControlers : MonoBehaviour {
         LoadResources();
     }
 
-
-
     private void LoadResources()
     {
-        levels[0] = 1;
+        levels[Constants.LevelSave.INDEX_LEVEL_ONE] = Constants.LevelSave.NUMBER_UNLOCK_LEVEL;
 
-
-        for (int i = 0; i < 10; i++)
+        for (int i = Constants.LevelSave.INDEX_LEVEL_ONE; i < Constants.LevelSave.NUMBER_MAX_LEVELS; i++)
         {
-
-            // PARA CADA FASE
             if (PlayerPrefs.HasKey(LevelsKey + i))
             {
                 levels[i] = PlayerPrefs.GetInt(LevelsKey + i);

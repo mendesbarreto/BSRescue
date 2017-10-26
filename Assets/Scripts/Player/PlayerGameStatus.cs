@@ -35,11 +35,13 @@ public sealed class PlayerGameStatus : MonoBehaviour
         set { winGameStatus = value; }
     }
 
+    private const int MAX_LEVEL_NUMBER = 10;
+
 	private PlayerController playerController;
 	private Rigidbody2D playerRb;
 	private InputController inputController;
 
-    private const int MAX_LEVEL_NUMBER = 10;
+    private int nextLevel;
 
 	private void Start()
 	{
@@ -103,17 +105,24 @@ public sealed class PlayerGameStatus : MonoBehaviour
         winGameStatus = true;
 		//winScreen.enabled = true;
 		playerController.StopPlayer();
-        WhenPlayerWin();
+        UnlockNextLevel();
 
         SceneManager.LoadScene(Constants.SceneName.COMIC);
 	}
 
-    private void WhenPlayerWin()
+    private void UnlockNextLevel()
     {
-        if (LevelControlers.instance.Levels[currentLevelNumber + 1] == 0 && currentLevelNumber < MAX_LEVEL_NUMBER)
+        nextLevel = ++currentLevelNumber;
+
+        if (LevelControlers.instance.Levels[nextLevel] == 0 && currentLevelNumber < MAX_LEVEL_NUMBER)
         {
-            LevelControlers.instance.Levels[currentLevelNumber + 1] = 1;
-            PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (currentLevelNumber + 1), LevelControlers.instance.Levels[currentLevelNumber + 1]);
+            LevelControlers.instance.Levels[nextLevel] = 1;
+            SaveUnlockNextLevel();
         }
+    }
+
+    private void SaveUnlockNextLevel()
+    {
+        PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (nextLevel), LevelControlers.instance.Levels[nextLevel]);
     }
 }

@@ -22,7 +22,7 @@ public sealed class UnlockLevels : MonoBehaviour {
 
     private void VerifyLevel()
     {
-        if (LevelControlers.instance.Levels[CurrentLevel] == 1)
+        if (LevelControlers.instance.Levels[CurrentLevel] == Constants.LevelSave.NUMBER_UNLOCK_LEVEL)
         {
             GetComponent<Image>().enabled = false;
             LvlButton.interactable = true;

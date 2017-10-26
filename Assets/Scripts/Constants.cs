@@ -46,4 +46,13 @@ public sealed class Constants
         public const int NUMBER_TO_LOCK_PLAY_BUTTON = 0;
         public const int NUMBER_TO_UNLOCK_PLAY_BUTTON = 1;
     }
+
+    public sealed class LevelSave
+    {
+        public const int NUMBER_UNLOCK_LEVEL = 1;
+        public const int NUMBER_LOCK_LEVEL = 0;
+        public const int INDEX_LEVEL_ONE = 0;
+        public const int NUMBER_MAX_LEVELS = 10;
+        public const string TEXT_LEVELS_KEY = "Levels ";
+    }
 }

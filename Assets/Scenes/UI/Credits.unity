@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 820029512}
   - component: {fileID: 820029511}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BGText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,13 +270,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1952985603}
   m_Father: {fileID: 1140997944}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.6, y: -50}
+  m_AnchoredPosition: {x: -0.79998994, y: -50}
   m_SizeDelta: {x: 343.6, y: 269.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820029511
@@ -472,7 +473,6 @@ RectTransform:
   - {fileID: 1020596085}
   - {fileID: 2026888228}
   - {fileID: 1175805844}
-  - {fileID: 1952985603}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -916,16 +916,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1952985602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1140997944}
-  m_RootOrder: 5
+  m_Father: {fileID: 820029510}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.2, y: -105.6}
+  m_AnchoredPosition: {x: -1.3999901, y: -55.599995}
   m_SizeDelta: {x: 364.37, y: 342.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952985604
@@ -1092,7 +1092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 153}
+  m_AnchoredPosition: {x: -0.79999, y: 153}
   m_SizeDelta: {x: 311.8, y: 85.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026888229

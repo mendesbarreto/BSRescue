@@ -84,7 +84,7 @@ public sealed class MainMenu : MonoBehaviour
 
     private void VerifyToUnlockButtonStart()
     {
-        if (MainGame.instance.GameStats == Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON)
+        if (GameSave.instance.GameStats == Constants.Code.NUMBER_TO_UNLOCK_PLAY_BUTTON)
         {
             playButton.interactable = true;
             textPlayButton.enabled = true;

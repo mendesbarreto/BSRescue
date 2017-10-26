@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class SpecialEffect : MonoBehaviour {
+public sealed class SpecialEffect : MonoBehaviour 
+{
 
-    public static SpecialEffect Instance;
+    public static SpecialEffect instance;
 
     [SerializeField]
     private ParticleSystem brokeEffect;
@@ -12,12 +13,12 @@ public sealed class SpecialEffect : MonoBehaviour {
 
     private void Awake()
     {
-        if (Instance != null)
+        if (instance != null)
         {
             Debug.LogError("Multiple instances of SpecialEffectsHelper!");
         }
 
-        Instance = this;
+        instance = this;
     }
 
 
@@ -29,7 +30,9 @@ public sealed class SpecialEffect : MonoBehaviour {
     private ParticleSystem instantiate(ParticleSystem prefab, Vector2 position)
     {
         ParticleSystem newParticleSystem = Instantiate(prefab, position, Quaternion.identity) as ParticleSystem;
+
         Destroy(newParticleSystem.gameObject, newParticleSystem.main.startLifetimeMultiplier);
+
         return newParticleSystem;
     }
 }
