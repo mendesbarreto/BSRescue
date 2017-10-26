@@ -291,7 +291,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eaa8cbec28d354fb8a5aa7280e5754cb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.23
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc5d382959b044b79ee37736c227f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isKeyboard: 1
+  isKeyboard: 0
 --- !u!114 &114243439906680766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -439,7 +439,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 223759868305576558, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
     type: 2}
-  audioDeath: {fileID: 0}
 --- !u!114 &114653976510044052
 MonoBehaviour:
   m_ObjectHideFlags: 1

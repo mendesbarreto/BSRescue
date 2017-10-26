@@ -4308,7 +4308,7 @@ Prefab:
     - target: {fileID: 114243439906680766, guid: ec1fb02be70c6436aba1d363a2f15ce4,
         type: 2}
       propertyPath: currentLevelNumber
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
       propertyPath: m_LocalPosition.x
