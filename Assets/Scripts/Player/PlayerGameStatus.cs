@@ -1,14 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class PlayerGameStatus : MonoBehaviour 
 {
 	[SerializeField]
-	private float gameGoal = 15;
+	private float gameGoal;
 
 	[SerializeField]
 	private Canvas winScreen;
+
+    [SerializeField]
+    private int currentLevelNumber;
+
+    private bool gameStart;
+    private bool winGameStatus;
 
 	public Canvas WinScreen 
 	{
@@ -16,11 +23,25 @@ public sealed class PlayerGameStatus : MonoBehaviour
 		set { winScreen = value; }
 	}
 
-	private bool gameStart;
+    public bool GameStart
+    {
+        get { return gameStart; }
+        set { gameStart = value; }
+    }
+
+    public bool WinGameStatus
+    {
+        get { return winGameStatus; }
+        set { winGameStatus = value; }
+    }
+
+    private const int MAX_LEVEL_NUMBER = 10;
 
 	private PlayerController playerController;
 	private Rigidbody2D playerRb;
 	private InputController inputController;
+
+    private int nextLevel;
 
 	private void Start()
 	{
@@ -34,12 +55,13 @@ public sealed class PlayerGameStatus : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		CheckGameStart();
+        SetCheckerGameGoal();
 	}
 
 	private void LoadResources()
 	{
 		winScreen.enabled = false;
+        winGameStatus = false;
 
 		playerController = GetComponent<PlayerController>();
 		inputController = GetComponent<InputController>();
@@ -57,7 +79,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	}
 
 	// check if game start
-	private void CheckGameStart()
+    private void SetCheckerGameGoal()
 	{
 		if(gameStart) 
 		{
@@ -80,7 +102,27 @@ public sealed class PlayerGameStatus : MonoBehaviour
 
 	private void WinGame()
 	{
-		winScreen.enabled = true;
+        winGameStatus = true;
+		//winScreen.enabled = true;
 		playerController.StopPlayer();
+        UnlockNextLevel();
+
+        SceneManager.LoadScene(Constants.SceneName.COMIC);
 	}
+
+    private void UnlockNextLevel()
+    {
+        nextLevel = ++currentLevelNumber;
+
+        if (LevelControlers.instance.Levels[nextLevel] == 0 && currentLevelNumber < MAX_LEVEL_NUMBER)
+        {
+            LevelControlers.instance.Levels[nextLevel] = 1;
+            SaveUnlockNextLevel();
+        }
+    }
+
+    private void SaveUnlockNextLevel()
+    {
+        PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (nextLevel), LevelControlers.instance.Levels[nextLevel]);
+    }
 }

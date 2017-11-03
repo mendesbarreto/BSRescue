@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Fuel
   - Floor
+  - Bar
+  - ButtonStart
+  - Loading
   layers:
   - Default
   - TransparentFX

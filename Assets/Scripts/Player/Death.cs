@@ -23,8 +23,14 @@ public sealed class Death : MonoBehaviour
 	{
         if(collision.gameObject.tag == Constants.TagName.FLOOR) 
 		{
-			Destroy(gameObject);
-			deathScreen.enabled = true;
+            DeathPlayer();
 		}
 	}
+
+    public void DeathPlayer()
+    {
+        SpecialEffect.instance.Explosion(transform.position);
+        Destroy(gameObject);
+        deathScreen.enabled = true;
+    }
 }

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public sealed class SplashScreen : MonoBehaviour 
 {
-	[SerializeField]
-	private float secondsToChange = 2;
+    [SerializeField]
+    private float secondsToChange = 0f;
 
 	private void Start() 
 	{
