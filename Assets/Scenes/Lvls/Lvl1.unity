@@ -1190,7 +1190,7 @@ Prefab:
     - target: {fileID: 114119738140233376, guid: ec1fb02be70c6436aba1d363a2f15ce4,
         type: 2}
       propertyPath: isKeyboard
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 82222767611698670, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
@@ -4947,6 +4947,27 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 339156395}
+    - target: {fileID: 114310054677287254, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f3596236cd9340b7bcb9fb3a1a43cf1,
+        type: 3}
+    - target: {fileID: 224761802041464644, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -178.19998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224761802041464644, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 224761802041464644, guid: bfb8c6c0d0c364092a9b7dc1dbde545f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 86.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfb8c6c0d0c364092a9b7dc1dbde545f, type: 2}
   m_IsPrefabParent: 0
