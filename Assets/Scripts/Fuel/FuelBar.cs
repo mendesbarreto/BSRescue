@@ -10,7 +10,7 @@ public sealed class FuelBar : MonoBehaviour
     private PlayerGameStatus playerGameStatus;
     [SerializeField]
     private GameObject warningEffect;
-
+    private float warningZone = 25;
     private float heightFuelBar;
 
 	private void Start () 
@@ -46,10 +46,10 @@ public sealed class FuelBar : MonoBehaviour
 
     private void ChangeFuel()
     {
-        if (fuelController.CurrentFuel <= 25 && warningEffect.activeInHierarchy == false)
+        if (fuelController.CurrentFuel <= warningZone && warningEffect.activeInHierarchy == false)
         {
             warningEffect.SetActive(true);
-        } else if (fuelController.CurrentFuel > 25 && warningEffect.activeInHierarchy == true)
+        } else if (fuelController.CurrentFuel > warningZone && warningEffect.activeInHierarchy == true)
         {
             warningEffect.SetActive(false);
         }
