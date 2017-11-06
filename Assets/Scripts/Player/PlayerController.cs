@@ -4,6 +4,24 @@ using UnityEngine;
 
 public sealed class PlayerController : MonoBehaviour 
 {
+    [SerializeField]
+    private Animator propellerAnimator;
+
+    [SerializeField]
+    private AudioSource propellerAudio;
+
+    public Animator PropellerAnimator
+    {
+        get { return propellerAnimator; }
+        set { propellerAnimator = value; }
+    }
+
+    public AudioSource PropellerAudio
+    {
+        get { return propellerAudio; }
+        set { propellerAudio = value; }
+    }
+
 	private const float DIRECTION_UP = 1;
 	private const float DIRECTION_DOWN = -1;
 	private const float DIRECTION_MOVE_HORIZONTAL = 1;
@@ -33,10 +51,14 @@ public sealed class PlayerController : MonoBehaviour
 	{
 		if(inputController.PressKeyToPlay) 
 		{
+            propellerAnimator.SetTrigger("IncreasesSpeed");
+            propellerAudio.pitch = 2.5f;
 			moveToVertical = DIRECTION_UP * SPEED_UP_PLAYER;
 		} 
 		else 
 		{
+            propellerAnimator.SetTrigger("DecreasesSpeed");
+            propellerAudio.pitch = 1f;
 			moveToVertical = DIRECTION_DOWN * SPEED_DOWN_PLAYER;
 		}
 	}
