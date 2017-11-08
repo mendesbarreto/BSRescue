@@ -76,6 +76,7 @@ public sealed class PlayerController : MonoBehaviour
 	// Player Stop
 	public void StopPlayer() 
 	{
-		playerRb.velocity = Vector2.zero;
+        //playerRb.velocity = Vector2.zero;
+        playerRb.velocity = new Vector2(0, DIRECTION_DOWN * SPEED_DOWN_PLAYER);
 	}
 }

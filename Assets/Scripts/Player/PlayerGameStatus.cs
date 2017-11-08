@@ -8,20 +8,12 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	[SerializeField]
 	private float gameGoal;
 
-	[SerializeField]
-	private Canvas winScreen;
-
     [SerializeField]
     private int currentLevelNumber;
 
     private bool gameStart;
     private bool winGameStatus;
 
-	public Canvas WinScreen 
-	{
-		get { return winScreen; }
-		set { winScreen = value; }
-	}
 
     public bool GameStart
     {
@@ -60,7 +52,6 @@ public sealed class PlayerGameStatus : MonoBehaviour
 
 	private void LoadResources()
 	{
-		winScreen.enabled = false;
         winGameStatus = false;
 
 		playerController = GetComponent<PlayerController>();
@@ -103,11 +94,10 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private void WinGame()
 	{
         winGameStatus = true;
-		//winScreen.enabled = true;
 		playerController.StopPlayer();
         UnlockNextLevel();
 
-        SceneManager.LoadScene(Constants.SceneName.COMIC);
+        //SceneManager.LoadScene(Constants.SceneName.COMIC);
 	}
 
     private void UnlockNextLevel()
