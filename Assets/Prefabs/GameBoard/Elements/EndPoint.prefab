@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4295461439186818}
   - component: {fileID: 212441980156612836}
   - component: {fileID: 60675462861973912}
-  - component: {fileID: 114227547767166172}
+  - component: {fileID: 114317373424179152}
   m_Layer: 0
   m_Name: EndPoint
   m_TagString: Untagged
@@ -340,7 +340,7 @@ PolygonCollider2D:
       - {x: 4.5395317, y: 2.3194532}
       - {x: 4.7739067, y: 2.378047}
       - {x: 4.7739067, y: 2.221797}
---- !u!114 &114227547767166172
+--- !u!114 &114317373424179152
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1769876297580744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 686c7b1a1725b497087f318f360ef2c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 22958703e45a4417eaa72ab792fe4cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 0}

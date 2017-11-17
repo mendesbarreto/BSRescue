@@ -31,6 +31,7 @@ public sealed class PlayerController : MonoBehaviour
 
 	private InputController inputController;
 	private Rigidbody2D playerRb;
+    private Animator playerAnimator;
 
 	private float moveToHorizontal;
 	private float moveToVertical;
@@ -43,6 +44,7 @@ public sealed class PlayerController : MonoBehaviour
 	private void LoadResources() 
 	{
 		playerRb = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
 		inputController = GetComponent<InputController>();
 	}
 
@@ -53,12 +55,16 @@ public sealed class PlayerController : MonoBehaviour
 		{
             propellerAnimator.SetTrigger("IncreasesSpeed");
             propellerAudio.pitch = 2.5f;
+            playerAnimator.ResetTrigger("DownPlayer");
+            playerAnimator.SetTrigger("UpPlayer");
 			moveToVertical = DIRECTION_UP * SPEED_UP_PLAYER;
 		} 
 		else 
 		{
             propellerAnimator.SetTrigger("DecreasesSpeed");
             propellerAudio.pitch = 1f;
+            playerAnimator.ResetTrigger("UpPlayer");
+            playerAnimator.SetTrigger("DownPlayer");
 			moveToVertical = DIRECTION_DOWN * SPEED_DOWN_PLAYER;
 		}
 	}
