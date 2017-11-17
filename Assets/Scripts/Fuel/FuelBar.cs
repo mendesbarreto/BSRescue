@@ -8,7 +8,9 @@ public sealed class FuelBar : MonoBehaviour
     private GameObject player;
     private FuelController fuelController;
     private PlayerGameStatus playerGameStatus;
-
+    [SerializeField]
+    private GameObject warningEffect;
+    private float warningZone = 25;
     private float heightFuelBar;
 
 	private void Start () 
@@ -23,6 +25,8 @@ public sealed class FuelBar : MonoBehaviour
 
     private void LoadResources()
     {
+        warningEffect.SetActive(false);
+
         player = GameObject.FindGameObjectWithTag(Constants.TagName.PLAYER);
 
         fuelBar = GetComponent<RectTransform>();
@@ -42,7 +46,15 @@ public sealed class FuelBar : MonoBehaviour
 
     private void ChangeFuel()
     {
+        if (fuelController.CurrentFuel <= warningZone && warningEffect.activeInHierarchy == false)
+        {
+            warningEffect.SetActive(true);
+        } else if (fuelController.CurrentFuel > warningZone && warningEffect.activeInHierarchy == true)
+        {
+            warningEffect.SetActive(false);
+        }
         fuelBar.sizeDelta = new Vector2(WidthFuelBar(), heightFuelBar);
+      
     }
 
     private float WidthFuelBar()
