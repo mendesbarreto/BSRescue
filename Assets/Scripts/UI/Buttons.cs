@@ -30,4 +30,9 @@ public class Buttons : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ContinuePress()
+    {
+        SceneManager.LoadScene(Constants.SceneName.COMIC);
+    }
 }
