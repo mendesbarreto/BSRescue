@@ -1523,10 +1523,25 @@ Prefab:
       propertyPath: isKeyboard
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95611365462200848, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 865bad71550e94b4cbc218ce982b655e, type: 2}
+    - target: {fileID: 114653976510044052, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: propellerAnimator
+      value: 
+      objectReference: {fileID: 432976543}
     m_RemovedComponents:
     - {fileID: 82222767611698670, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &432976543 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95611365462200848, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 432976542}
 --- !u!1 &476982856
 GameObject:
   m_ObjectHideFlags: 0

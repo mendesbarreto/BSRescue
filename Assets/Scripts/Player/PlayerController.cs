@@ -4,6 +4,15 @@ using UnityEngine;
 
 public sealed class PlayerController : MonoBehaviour 
 {
+    [SerializeField]
+    private Animator propellerAnimator;
+
+    public Animator PropellerAnimator
+    {
+        get { return propellerAnimator; }
+        set { propellerAnimator = value; }
+    }
+
 	private const float DIRECTION_UP = 1;
 	private const float DIRECTION_DOWN = -1;
 	private const float DIRECTION_MOVE_HORIZONTAL = 1;
@@ -33,10 +42,12 @@ public sealed class PlayerController : MonoBehaviour
 	{
 		if(inputController.PressKeyToPlay) 
 		{
+            propellerAnimator.SetTrigger("IncreasesSpeed");
 			moveToVertical = DIRECTION_UP * SPEED_UP_PLAYER;
 		} 
 		else 
 		{
+            propellerAnimator.SetTrigger("DecreasesSpeed");
 			moveToVertical = DIRECTION_DOWN * SPEED_DOWN_PLAYER;
 		}
 	}
