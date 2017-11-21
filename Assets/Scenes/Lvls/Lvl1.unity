@@ -1521,7 +1521,7 @@ Prefab:
     - target: {fileID: 114119738140233376, guid: ec1fb02be70c6436aba1d363a2f15ce4,
         type: 2}
       propertyPath: isKeyboard
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 95611365462200848, guid: ec1fb02be70c6436aba1d363a2f15ce4,
         type: 2}
