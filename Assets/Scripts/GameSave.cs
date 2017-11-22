@@ -16,6 +16,8 @@ public sealed class GameSave : MonoBehaviour
 
     private void Awake()
     {
+        //PlayerPrefs.DeleteAll();
+
         if (instance != null)
         {
             Debug.LogError("Multiple instances of GameSave!");

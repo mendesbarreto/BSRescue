@@ -31,7 +31,6 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private PlayerController playerController;
 	private Rigidbody2D playerRb;
 	private InputController inputController;
-
     private int nextLevel;
 
 	private void Start()
@@ -52,6 +51,7 @@ public sealed class PlayerGameStatus : MonoBehaviour
 	private void LoadResources()
 	{
         winGameStatus = false;
+        nextLevel = currentLevelNumber + 1;
 
 		playerController = GetComponent<PlayerController>();
 		inputController = GetComponent<InputController>();
@@ -101,8 +101,6 @@ public sealed class PlayerGameStatus : MonoBehaviour
 
     private void UnlockNextLevel()
     {
-        nextLevel = ++currentLevelNumber;
-
         if (LevelControlers.instance.Levels[nextLevel] == 0 && currentLevelNumber < MAX_LEVEL_NUMBER)
         {
             LevelControlers.instance.Levels[nextLevel] = 1;
