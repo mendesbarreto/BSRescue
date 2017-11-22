@@ -891,9 +891,19 @@ Prefab:
       propertyPath: currentLevelNumber
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114653976510044052, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: propellerAnimator
+      value: 
+      objectReference: {fileID: 321217819}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &321217819 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95611365462200848, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 321217818}
 --- !u!1 &332786913
 GameObject:
   m_ObjectHideFlags: 0

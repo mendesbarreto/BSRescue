@@ -4292,9 +4292,19 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -3.54
       objectReference: {fileID: 0}
+    - target: {fileID: 114653976510044052, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: propellerAnimator
+      value: 
+      objectReference: {fileID: 1538097646}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1538097646 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95611365462200848, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1538097645}
 --- !u!1 &1588963496
 GameObject:
   m_ObjectHideFlags: 0

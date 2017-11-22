@@ -4027,9 +4027,19 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114653976510044052, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: propellerAnimator
+      value: 
+      objectReference: {fileID: 1514546349}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &1514546349 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95611365462200848, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1514546348}
 --- !u!1001 &1544569560
 Prefab:
   m_ObjectHideFlags: 0
