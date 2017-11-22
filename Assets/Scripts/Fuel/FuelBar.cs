@@ -13,6 +13,7 @@ public sealed class FuelBar : MonoBehaviour
     private float warningZone = 25;
     private float heightFuelBar;
 
+
 	private void Start () 
     {
         LoadResources();
