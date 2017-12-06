@@ -2173,11 +2173,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.11
+      value: -5.07
       objectReference: {fileID: 0}
     - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.22
+      value: -1.91
       objectReference: {fileID: 0}
     - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2218,6 +2218,11 @@ Prefab:
       propertyPath: propellerAnimator
       value: 
       objectReference: {fileID: 883540396}
+    - target: {fileID: 82052475184773300, guid: ec1fb02be70c6436aba1d363a2f15ce4,
+        type: 2}
+      propertyPath: MinDistance
+      value: 1.114423
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0

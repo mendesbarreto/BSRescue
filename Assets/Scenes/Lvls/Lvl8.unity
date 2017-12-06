@@ -3192,6 +3192,14 @@ Prefab:
       propertyPath: propellerAnimator
       value: 
       objectReference: {fileID: 2029789821}
+    - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0

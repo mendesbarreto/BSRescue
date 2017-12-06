@@ -1327,6 +1327,14 @@ Prefab:
       propertyPath: propellerAnimator
       value: 
       objectReference: {fileID: 321217819}
+    - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399807675625870, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec1fb02be70c6436aba1d363a2f15ce4, type: 2}
   m_IsPrefabParent: 0
@@ -4338,8 +4346,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301277046}
   m_LocalRotation: {x: -0, y: -0, z: 0.007703289, w: 0.9999704}
-  m_LocalPosition: {x: 7.950001, y: -17.21, z: 0}
-  m_LocalScale: {x: 0.6038301, y: 0.45425004, z: 1}
+  m_LocalPosition: {x: 7.878, y: -17.021, z: 0}
+  m_LocalScale: {x: 0.6340476, y: 0.4985068, z: 1}
   m_Children: []
   m_Father: {fileID: 1033624120}
   m_RootOrder: 1
